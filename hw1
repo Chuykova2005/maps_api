@@ -22,12 +22,12 @@ class MapParams(object):
         self.use_postal_code = False
 
     def update(self, event):
-        # переключение на sat - стрелочка вправо, на skl - стрелочка влево,  map - стрелочка вниз
-        if event.key == pygame.K_RIGHT:
+        # переключение на sat - 1, на skl - 2,  map - 3
+        if event.key ==  pygame.key.get_pressed()[pygame.K_1]:
             self.type = "sat"
-        if event.key == pygame.K_LEFT:
+        if event.key ==  pygame.key.get_pressed()[pygame.K_2]:
             self.type = "skl"
-        if event.key == pygame.K_DOWN:
+        if event.key ==  pygame.key.get_pressed()[pygame.K_3]:
             self.type = "sat"
 
     def search_toponym(self, address):
